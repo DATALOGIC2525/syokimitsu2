@@ -1,0 +1,4 @@
+- [x] `docs/project_documents/要件定義書.md` の作成
+- [x] `docs/project_documents/仕様書.md` の作成
+- [x] ドキュメント間の整合性チェックと最終調整
+- [x] Walkthroughの生成

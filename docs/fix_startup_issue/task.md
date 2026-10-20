@@ -1,0 +1,4 @@
+- [ ] `src/app/api/customers/route.ts` のフェッチキャッシュエラーを修正
+- [ ] `src/middleware.ts` の `TypeError` 対策（安全な値チェックの追加）
+- [ ] 開発サーバーの起動確認 (`npm run dev`)
+- [ ] ブラウザでの動作確認
