@@ -28,6 +28,11 @@ function cleanupRateLimitStore(windowMs: number) {
 }
 
 export function getClientIp(req: Request): string {
+  // Cloudflare経由の場合は改ざん不可能な cf-connecting-ip を最優先で取得
+  const cfIp = req.headers.get('cf-connecting-ip');
+  if (cfIp) {
+    return cfIp.trim();
+  }
   const forwarded = req.headers.get('x-forwarded-for');
   if (forwarded) {
     return forwarded.split(',')[0].trim();
